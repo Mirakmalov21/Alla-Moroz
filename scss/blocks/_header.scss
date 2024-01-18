@@ -96,8 +96,8 @@
 
   .header__top-list {
     position: absolute;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 50vh;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -105,7 +105,7 @@
     align-items: center;
     gap: 30px;
     background-color: $bg-color;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: all 0.7s ease;
 
     li,
@@ -114,14 +114,14 @@
       font-size: 20px;
     }
   }
+  
+    #dots__menu:checked + .header__top-list {
+      transform: translateY(0);
+    }
 
   .header__wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  #dots__menu:checked + .header__top-list {
-    transform: translateX(0);
   }
 
   #dots__menu {
