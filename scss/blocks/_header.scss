@@ -1,0 +1,150 @@
+.header__top {
+  padding: 20px 0;
+  background-color: $bg-color;
+
+  @include media(0, 1024px) {
+    padding: 15px 0;
+  }
+}
+
+.header__top-list {
+  display: flex;
+  justify-content: space-around;
+
+  li,
+  a,
+  span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+      color: $bg-header-bottom;
+    }
+    @include media(0, 1024px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.social__icons {
+  display: flex;
+  gap: 24px;
+
+  img {
+    width: 24px;
+    height: 22px;
+  }
+}
+
+.media__disable {
+  @include media(0, 1024px) {
+    display: none;
+  }
+}
+
+.header__bottom {
+  padding: 30px 0;
+  background-color: $bg-header-bottom;
+  @include media(0, 1024px) {
+    padding: 10px 0;
+  }
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header__list-item a {
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+
+  &:hover {
+    color: $hover;
+  }
+
+  @include media(0, 1024px) {
+    font-size: 24px;
+  }
+}
+
+.media__logo {
+  display: none;
+
+  @include media(0, 1024px) {
+    display: block;
+  }
+}
+
+.logo {
+  @include media(0, 1024px) {
+    display: none;
+  }
+}
+
+@include mobile() {
+  header {
+    position: relative;
+  }
+
+  .header__top {
+    background-color: $bg-header-bottom;
+  }
+
+  .header__top-list {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: $bg-color;
+    transform: translateX(100%);
+    transition: all 0.7s ease;
+
+    li,
+    a,
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #dots__menu:checked + .header__top-list {
+    transform: translateX(0);
+  }
+
+  #dots__menu {
+    visibility: hidden;
+  }
+}
+
+.dots__menu,
+#dots__menu {
+  display: none;
+
+  @include mobile() {
+    display: block;
+    z-index: 9999;
+  }
+}
+
+.mobile__logo {
+  display: none;
+
+  @include mobile() {
+    display: block;
+    width: 65px;
+    height: 58px;
+  }
+}
