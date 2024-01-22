@@ -1,3 +1,9 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .header__top {
   padding: 20px 0;
   background-color: $bg-color;
@@ -150,7 +156,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
@@ -163,7 +169,7 @@
   #menuOpener:checked + .header__list {
     transform: translateX(0);
   }
-
+  
   #menuOpener {
     visibility: hidden;
   }
