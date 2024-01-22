@@ -13,7 +13,7 @@ header {
   }
 
   @include mobile() {
-    padding:  10px 0 0;
+    padding: 10px 0 0;
   }
 }
 
@@ -64,7 +64,6 @@ header {
     padding: 0;
     height: 0;
   }
-
 }
 
 .header__list {
@@ -136,7 +135,7 @@ header {
     a,
     span {
       font-size: 20px;
-    } 
+    }
   }
 
   #dots__menu:checked + .header__top-list {
@@ -169,7 +168,7 @@ header {
   #menuOpener:checked + .header__list {
     transform: translateX(0);
   }
-  
+
   #menuOpener {
     visibility: hidden;
   }
@@ -180,8 +179,6 @@ header {
     left: 20px;
     z-index: 9999;
   }
-
-
 }
 
 #menuOpener,
@@ -215,3 +212,10 @@ header {
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.transform {
+  transform: translate(-100%);
+}

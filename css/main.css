@@ -12260,6 +12260,14 @@ header {
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.transform {
+  transform: translate(-100%);
+}
+
 .hero {
   position: relative;
   padding: 250px 0 60px;
