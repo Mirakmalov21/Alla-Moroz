@@ -12261,11 +12261,7 @@ header {
 }
 
 .hidden {
-  visibility: hidden;
-}
-
-.transform {
-  transform: translate(-100%);
+  display: none;
 }
 
 .hero {

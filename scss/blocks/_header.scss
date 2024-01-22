@@ -213,9 +213,6 @@ header {
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
-.transform {
-  transform: translate(-100%);
-}
